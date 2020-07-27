@@ -1,0 +1,50 @@
+[
+        {
+        "sys": { "id" : "1" },
+        "feilds": {
+            "title":"r15",
+            "price": "99.99",
+            "image":"./car/bike6.jpg"
+        }
+    },
+        {
+        "sys": { "id" : "2" },
+        "feilds": {
+            "title":"honda",
+            "price": "100.1",
+            "image":"./car/bike1.jpg"
+        }
+    },
+        {
+        "sys": { "id" : "3" },
+        "feilds": {
+            "title":"pulsar",
+            "price": "102.2",
+            "image":"./car/bike2.jpg"
+        }
+    },
+        {
+        "sys": { "id" : "4" },
+        "feilds": {
+            "title":"apache",
+            "price": "103.3",
+            "image":"./car/bike3.jpg"
+        }
+    },
+        {
+        "sys": { "id" : "5" },
+        "feilds": {
+            "title":"yamaha",
+            "price": "105.5",
+            "image":"./car/bike4.jpg"
+        }
+    },
+        {
+        "sys": { "id" : "6" },
+        "feilds": {
+            "title":"ducati",
+            "price": "111.5",
+            "image":"./car/bike6.jpg"
+        }
+    }
+]
