@@ -23,3 +23,165 @@
     color: rgb(6, 42, 247)!important;
 }
     
+.cart-btn{
+    position: relative;
+    cursor: pointer;
+
+}
+.cart-icon-items{
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: rgb(6, 42, 247);
+    color: white;
+    border-radius: 30%;
+    padding: 0 5px;
+    font-size: 0.7rem;
+}
+.cart-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+    transition: all ease 0.5s;
+    z-index: 1;
+    visibility:hidden;
+    
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgb(211, 210, 216);
+    z-index: 2;
+    transition: all ease 0.5s;
+    padding: 1.5rem;
+
+    /* transform:translateX(100%) */
+}
+.showCart{
+    transform: translateX(0);
+}
+.transparentBcg{
+    visibility:visible;
+}
+@media screen and (min-width:768px){
+    .cart{
+        width: 30vw;
+        min-width: 450px;
+    }
+}
+.close-cart {
+    font-size: 1.7rem;
+    cursor:pointer;
+}
+.cart h2 {
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: normal;
+    margin-bottom: 2rem;
+}
+/* cart-item  */
+
+.cart-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+.cart-item img{
+    width: 100px;
+    height: 100px;
+}
+.cart-item h4{
+    font-size: 0.5rem;
+    text-transform: capitalize;
+    letter-spacing: normal;
+}
+.cart-item h5 {
+    margin: 0.5rem 0;
+    letter-spacing: normal;
+    
+
+}
+.item-amount{
+    text-align: center;
+
+}
+.remove-item {
+    color: grey;
+    cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+    color: blue;
+    cursor: pointer;
+    margin-left:3.1rem ;
+}
+/*end of cart-item  */
+.cart-footer h3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+
+}
+.cart-footer{
+    text-align: center;
+}
+ .clear-cart{
+    background-color: blue;
+    color: white;
+    border: none;
+    align-items: center;
+    text-transform: uppercase;
+    padding:3px 70px;
+    
+}
+/* products */
+.img-container{
+    position: relative;
+    overflow: hidden;
+}
+.bag-btn{
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background-color: blue;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    font-weight:1.5rem;
+    font-size: .8rem;
+    transition: all ease 0.5s;
+    cursor: pointer;
+    border: none;
+    transform: translateX(101%);
+    cursor: pointer;
+
+}
+.bag-btn:hover{
+    color:blue;
+    background-color: transparent;
+    border: 1px solid blue;
+    
+}
+.img-container:hover .bag-btn{
+    transform: translateX(0);
+}
+.img-container:hover .product-img{
+    opacity: 0.5;
+}
+.product h4{
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+.product h5{
+    font-size: 1rem;
+}
+/*end of products */

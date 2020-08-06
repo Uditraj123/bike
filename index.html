@@ -13,7 +13,7 @@
     </style>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libspannimate.css/3.7.2 border rounded-lg /animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!--jquery library-->
@@ -26,6 +26,7 @@
     <script src="https://kit.fontawesome.com/7f1c7985f7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--button type="button" onclick="getProducts()">click</button-->
     <!----------------------------header-------------------------------->
 
     <div class="container-fluid">
@@ -85,11 +86,14 @@
                 </ul>
             </div>
             <div class="navbar-nav">
-                <li class="nav-item border rounded-circle mx-2 border   search-icon">
+                <li class="nav-item mx-2 mb-2   search-icon">
                     <i class="fas fa-search"></i>
                 </li>
-                <li class="nav-item border rounded-circle mx-2 border mr-3  search-icon">
-                    <i class="fas fa-shopping-basket"></i>
+                <li class="nav-item mx-2  mr-3 cart-btn  search-icon">
+                    <span>
+                        <i class="fas fa-cart-plus"></i>
+                        </span>
+                        <div class="cart-icon-items">0</div>
                 </li>
             </div>
         </nav>
@@ -164,7 +168,27 @@
     </div>
 
 
-    <!------------------------main slider one----------------------------->
+    <!-----------------/-------main slider one----------------------------->
+    <!-----------------------------------cart------------------------------>
+
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart">&times;
+                <i class="fas fa-window-close"></i>
+            </span>
+            <h2>Your cart</h2>
+            <div class="cart-content row">
+                <!--cart-item-->
+               
+                <!--cart-item-->
+            </div>
+            <div class="cart-footer my-5">
+                <h3>Your total : $ <span class="cart-total">0</span></h3>
+                <button class="clear-cart">clear cart</button>
+            </div>
+        </div>
+    </div>
+    <!-----------------------end of cart------------------------------>
 
     <!---------------------------main slider two--------------------------->
 
@@ -409,7 +433,7 @@
 
 
            
-               <div class="col-md-2 col-4 m-0 detail fixed-left" id="scrollspy">
+               <div class="col-md-2 col-12 m-0 detail fixed-left" id="scrollspy">
                    <div class="container-fluid text-center">
                        
                            <img src="./car/bike1.jpg" alt="honda bike" width="1100" height="500" class="img-fluid m-0">
@@ -444,13 +468,19 @@
                     
                    
                </div>
-               <div class="col-md-10 col-8 border m-0" data-spy="scroll" data-target="#scrollspy" data-offset="1">
-                   <div class="row 1">
-                   <div class="col-md-4 float-left m-0" id="">
-                       <div class="card border-none m-0">
-                           <img src="./car/bike1.jpg" alt="card-image" class="card-img-top">
+               <div class="col-md-10 col-12 m-0 products" data-spy="scroll" data-target="#scrollspy" data-offset="1">
+                   <div class="row 1 products-center">
+                   <div class="col-md-4 col-6 float-left m-0" id="honda">
+                       <div class="card border-none product m-0">
+                           <div class="img-container">
+                           <img src="./car/bike1.jpg" alt="card-image" class="card-img-top product-img">
+                           <button class="bag-btn" data-id="1">
+                               <i class="fas fa-shopping-cart"> </i>
+                               add to cart
+                           </button>
+                           </div>
                            <div class="card-body text-center m-0 p-0">
-                               <h5 class="m-0">honda</h5>
+                               <h4 class="title m-0">honda</h4>
                                <p class="m-0">
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -458,31 +488,43 @@
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning-half-alt"></i>
                                </p>
-                               <p class="m-0"><i class="fas fa-rupee-sign"></i>cost</p>
+                               <h5 class="m-0"><i class="fas fa-rupee-sign"></i>120000</h5>
                            </div>
                        </div>
                    </div>
-                   <div class="col-md-4 float-left m-0">
-                    <div class="card border-none m-0">
-                        <img src="./car/bike2.jpg" alt="card-image" class="card-img-top">
+                   <div class="col-md-4 col-6 float-left m-0" id="honda">
+                    <div class="card border-none product m-0">
+                        <div class="img-container">
+                        <img src="./car/bike2.jpg" alt="card-image" class="card-img-top product-img">
+                        <button class="bag-btn" data-id="2">
+                            <i class="fas fa-shopping-cart"></i>
+                            add to cart
+                        </button>
+                        </div>
                         <div class="card-body text-center m-0 p-0">
-                            <h5 class="m-0">product</h5>
+                            <h4 class="title m-0">r15</h4>
                             <p class="m-0">
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
-                            
+                                <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning-half-alt"></i>
                             </p>
-                            <p class="m-0"><i class="fas fa-rupee-sign"></i></p>
+                            <h5 class="m-0"><i class="fas fa-rupee-sign"></i>150000</h5>
                         </div>
                     </div>
                    </div>
-                    <div class="col-md-4 m-0">
-                        <div class="card border-none m-0">
-                            <img src="./car/bike3.jpg" alt="card-image" class="card-img-top">
+                    <div class="col-md-4 col-6 m-0">
+                        <div class="card border-none product m-0">
+                            <div class="img-container">
+                            <img src="./car/bike3.jpg" alt="card-image" class="card-img-top product-img">
+                            <button class="bag-btn" data-id="3">
+                                <i class="fas fa-shopping-cart"></i>
+                                add to cart
+                            </button>
+                            </div>
                             <div class="card-body text-center m-0 p-0">
-                                <h5 class="m-0">product</h4>
+                                <h4 class="m-0">ducati</h4>
                                 <p class="m-0">
                                     <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -490,18 +532,24 @@
                                 
                                 <i class="fas fa-star text-warning-half-alt"></i>
                                 </p>
-                                <p class="m-0"><i class="fas fa-rupee-sign"></i>cost</p>
+                                <h5 class="m-0"><i class="fas fa-rupee-sign"></i>200000</h5>
                             </div>
                         </div>
                 </div>
-                   </div> 
+                   <!--/div--> 
 
-                   <div class="row 2">
-                    <div class="col-md-4 float-left m-0">
-                        <div class="card border-none m-0">
-                            <img src="./car/bike4.jpg" alt="card-image" class="card-img-top">
+                   <!--div class="row 2"-->
+                    <div class="col-md-4 col-6 float-left m-0">
+                        <div class="card border-none product m-0">
+                            <div class="img-container">
+                            <img src="./car/bike4.jpg" alt="card-image" class="card-img-top product-img">
+                            <button class="bag-btn" data-id="4">
+                                <i class="fas fa-shopping-cart"></i>
+                                add to cart
+                            </button>
+                            </div>
                             <div class="card-body text-center m-0 p-0">
-                                <h5 class="m-0">product</h4>
+                                <h4 class="m-0">yamaha</h4>
                                 <p class="m-0">
                                     <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -509,15 +557,21 @@
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning-half-alt"></i>
                                 </p>
-                                <p class="m-0"><i class="fas fa-rupee-sign"></i>cost</p>
+                                <h5 class="m-0"><i class="fas fa-rupee-sign"></i>250000</h5>
                             </div>
                         </div>
                         </div>
-                        <div class="col-md-4 float-left m-0">
-                            <div class="card border-none m-0">
-                                <img src="./car/bike5.jpg" alt="card-image" class="card-img-top">
+                        <div class="col-md-4 col-6 float-left m-0">
+                            <div class="card border-none product m-0">
+                                <div class="img-container">
+                                <img src="./car/bike5.jpg" alt="card-image" class="card-img-top product-img">
+                                <button class="bag-btn" data-id="5">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    add to cart
+                                </button>
+                                </div>
                                 <div class="card-body text-center m-0 p-0">
-                                    <h5 class="m-0">product</h4>
+                                    <h4 class="m-0">hero</h4>
                                     <p class="m-0">
                                         <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -525,15 +579,21 @@
                                 <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning-half-alt"></i>
                                     </p>
-                                    <p class="m-0"><i class="fas fa-rupee-sign"></i>cost</p>
+                                    <h5 class="m-0"><i class="fas fa-rupee-sign"></i>250000</h5>
                                 </div>
                             </div>
                             </div>
-                            <div class="col-md-4 float-left m-0" id="honda">
-                                <div class="card border-none m-0">
-                                    <img src="./car/bike6.jpg" alt="card-image" class="card-img-top">
+                            <div class="col-md-4 col-6 float-left m-0" id="">
+                                <div class="card border-none product m-0">
+                                    <div class="img-container">
+                                    <img src="./car/bike6.jpg" alt="card-image" class="card-img-top product-img">
+                                    <button class="bag-btn" data-id="6">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        add to cart
+                                    </button>
+                                    </div>
                                     <div class="card-body text-center m-0 p-0">
-                                        <h5 class="m-0">product</h4>
+                                        <h4 class="m-0">pulsar</h4>
                                         <p class="m-0">
                                             <i class="fas fa-star text-warning"></i>
                                 <i class="fas fa-star text-warning"></i>
@@ -541,7 +601,7 @@
                                 
                                 <i class="fas fa-star text-warning-half-alt"></i>
                                         </p>
-                                        <p class="m-0"><i class="fas fa-rupee-sign"></i></p>
+                                        <h5 class="m-0"><i class="fas fa-rupee-sign"></i>300000</h5>
                                     </div>
                                 </div>
                                 </div>
@@ -629,5 +689,8 @@
     </div>
 
     <!--------------------------------/--footer------------------------------->
+    <script src="products.json"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
