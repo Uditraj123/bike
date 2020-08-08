@@ -102,15 +102,15 @@ class UI{
              
              const cartContent=document.createElement('div');
              cartContent.classList.add("cart-content","row")
-             cartContent.innerHTML= "<div class='cart-item col-4 mx-auto'>" +
+             cartContent.innerHTML= "<div class='cart-item col-4 '>" +
             "<img src=" +cartitem.image +" alt='bike1'>" +
         "</div>" +
-        "<div class='col-4 mx-auto my-auto'>" + 
+        "<div class='col-4  my-auto'>" + 
         "<h4>" + cartitem.title + "</h4>" +
         "<h5>" + cartitem.price + "</h5>" +
         "<span class='remove-item'>remove</span>" +
         "</div>" +
-        "<div class='col-4 mx-auto'>" +
+        "<div class='col-4 '>" +
             "<i class='fas fa-chevron-up'></i>" +
             "<p class='item-amount m-0'>1</p>" +
             "<i class='fas fa-chevron-down'></i>" +
