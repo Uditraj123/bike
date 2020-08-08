@@ -50,15 +50,17 @@ class UI{
         productsDOM.addEventListener('click',(e)=>{
             if(e.target.classList.contains('bag-btn')){
                
-               let image=e.target.previousElementSibling.src;
-               image=image.slice(60);
-               image=image.replace(image,"." + image)
+               let images=e.target.previousElementSibling.src;
+               images=images.slice(60);
+              const image=images.replace(images,"." + images)
                console.log(image);
                
                const title=e.target.parentElement.nextElementSibling.childNodes[1].innerHTML;
                const price=e.target.parentElement.nextElementSibling.childNodes[4].nextElementSibling.childNodes[1].data;
                const cartitem=new cart(title,price,image);
                console.log(cartitem);
+               console.log(String(cartitem.image));
+               
 
             const   cartitems=JSON.parse(localStorage.getItem('cartitems'));
             if(cartitems!==null){
@@ -103,7 +105,7 @@ class UI{
              const cartContent=document.createElement('div');
              cartContent.classList.add("cart-content","row")
              cartContent.innerHTML= "<div class='cart-item col-4 '>" +
-            "<img src=" +cartitem.image +" alt='bike1'>" +
+            "<img src=" + cartitem.image + " alt='bike1'>" +
         "</div>" +
         "<div class='col-4  my-auto'>" + 
         "<h4>" + cartitem.title + "</h4>" +
