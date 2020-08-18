@@ -1,4 +1,7 @@
-   
+body{
+    font-family: 'Source Code Pro',monospace!important;
+    font-size: 48px;
+}   
 .delivery{
     background-color: black;
 }
@@ -76,9 +79,19 @@
         min-width: 450px;
     }
 }
+.fa-window-close{
+    display:none;
+}
 .close-cart {
     font-size: 1.7rem;
     cursor:pointer;
+    padding:5px 10px;
+    background-color: red;
+    color: white;
+    box-shadow: 0 0 4px 1px black;
+}
+.close-cart:active{
+    box-shadow: 0 0 2px 1px black;
 }
 .cart h2 {
     text-transform: capitalize;
